@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/ScrollReveal";
 import AnimatedCounter from "@/components/AnimatedCounter";
-import heroImage from "@/assets/hero-supplies.png";
+const heroImage = "/placeholder.svg";
 import { School, ListChecks, Paintbrush, Truck, Heart, Users, Building2, HandHeart, Quote, ArrowRight, Star } from "lucide-react";
 
 const steps = [
