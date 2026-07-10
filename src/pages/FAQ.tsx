@@ -13,7 +13,7 @@ const faqs = [
   { q: "Do you deliver to my home?", a: "Yes! We deliver directly to your door within Edmonton. Delivery dates are scheduled well before the school year begins so you're always ready." },
   { q: "Can I apply for a sponsored box?", a: "Yes. If you need financial help, visit our Sponsored Box page. The process is simple, respectful, and confidential. We work with community partners to ensure every child gets what they need." },
   { q: "Can schools partner with SupplyBox?", a: "Definitely! We welcome school partnerships. Schools can share their supply lists with us and promote SupplyBox to their families. Visit our Partner page to learn more." },
-  { q: "What payment methods do you accept?", a: "We accept all major credit and debit cards through our secure checkout. Payment processing is handled by Stripe for maximum security." },
+  { q: "What payment methods do you accept?", a: "Online checkout is being connected. During launch, contact us and we will coordinate the safest available payment or donation option with you directly." },
   { q: "What is your return policy?", a: "If there's an issue with your order, contact us within 14 days of delivery. We'll work with you to make it right — whether that's a replacement, exchange, or refund." },
 ];
 
