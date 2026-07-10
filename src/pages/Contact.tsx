@@ -2,6 +2,9 @@ import ScrollReveal from "@/components/ScrollReveal";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 
+const contactEmail = "info@supplycollectivesbox.com";
+const contactPhone = "(587) 404-0118";
+
 export default function Contact() {
   return (
     <main>
@@ -24,7 +27,7 @@ export default function Contact() {
                 <h2 className="text-2xl font-bold text-foreground mb-6">Send Us a Message</h2>
                 <form
                   className="space-y-4"
-                  action="mailto:hello@supplybox.org"
+                  action={`mailto:${contactEmail}`}
                   method="post"
                   encType="text/plain"
                 >
@@ -53,8 +56,8 @@ export default function Contact() {
                 <div className="space-y-6">
                   <h2 className="text-2xl font-bold text-foreground mb-6">Get In Touch</h2>
                   {[
-                    { icon: Mail, label: "Email", value: "hello@supplybox.org" },
-                    { icon: Phone, label: "Phone", value: "Phone support coming soon" },
+                    { icon: Mail, label: "Email", value: contactEmail },
+                    { icon: Phone, label: "Phone", value: contactPhone },
                     { icon: MapPin, label: "Location", value: "Edmonton, AB, Canada" },
                   ].map((item, i) => (
                     <div key={i} className="flex items-start gap-4 p-4 rounded-xl bg-muted/50 border border-border/30">
