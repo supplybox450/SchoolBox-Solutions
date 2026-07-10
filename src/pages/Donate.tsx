@@ -9,6 +9,11 @@ const tiers = [
   { amount: 100, label: "Family Pack", impact: "Supports two children with complete boxes" },
 ];
 
+const donationHref = (amount: number | "custom") =>
+  `mailto:hello@supplybox.org?subject=${encodeURIComponent(
+    amount === "custom" ? "Custom donation pledge" : `Donation pledge - $${amount}`
+  )}`;
+
 export default function Donate() {
   return (
     <main>
@@ -38,8 +43,8 @@ export default function Donate() {
                   <span className="text-4xl font-bold text-foreground">${tier.amount}</span>
                   <span className="text-sm font-semibold text-foreground mt-2">{tier.label}</span>
                   <p className="text-sm text-muted-foreground mt-3 flex-1">{tier.impact}</p>
-                  <Button className="mt-6 w-full" variant={i === 1 ? "default" : "outline"}>
-                    Donate ${tier.amount}
+                  <Button className="mt-6 w-full" variant={i === 1 ? "default" : "outline"} asChild>
+                    <a href={donationHref(tier.amount)}>Pledge ${tier.amount}</a>
                   </Button>
                 </div>
               </ScrollReveal>
@@ -57,7 +62,12 @@ export default function Donate() {
                   className="w-full h-12 px-4 rounded-xl border border-border bg-card text-foreground text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-ring"
                 />
               </div>
-              <Button size="lg">Donate Now</Button>
+              <Button size="lg" asChild>
+                <a href={donationHref("custom")}>Contact Us to Donate</a>
+              </Button>
+              <p className="text-xs text-muted-foreground mt-4">
+                Online payment is being connected. Email pledges help us coordinate donations safely during launch.
+              </p>
               <div className="flex items-center justify-center gap-2 mt-4">
                 <input type="checkbox" id="monthly" className="rounded" />
                 <label htmlFor="monthly" className="text-sm text-muted-foreground">Make this a monthly recurring donation</label>
