@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/ScrollReveal";
-const heroImage = "/placeholder.svg?v=801c340";
+const heroImage = "/supplybox-hero-original.webp?v=2ae7458";
 import { School, ListChecks, Paintbrush, Truck, Heart, Building2, HandHeart, ArrowRight, Star, Mail, ShieldCheck } from "lucide-react";
 
 const steps = [
