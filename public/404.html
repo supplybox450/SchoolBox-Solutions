@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <title>SupplyBox</title>
   <script>
-    // SPA redirect for GitHub Pages
-    var pathSegmentsToKeep = 1;
+    // SPA redirect for GitHub Pages. Keep the repo segment only on the github.io project URL.
+    var pathSegmentsToKeep = window.location.hostname.endsWith('github.io') ? 1 : 0;
     var l = window.location;
     l.replace(
       l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
