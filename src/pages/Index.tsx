@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/ScrollReveal";
-const heroImage = "/supplybox-hero-product.jpg?v=1839c91";
+const heroImage = "/supplybox-hero-product-compact.webp?v=965ae37";
 import { School, ListChecks, Paintbrush, Truck, Heart, Building2, HandHeart, ArrowRight, Star, Mail, ShieldCheck } from "lucide-react";
 
 const steps = [
@@ -51,7 +51,7 @@ export default function HomePage() {
                 <img
                   src={heroImage}
                   alt="Colorful school supply box filled with pencils, crayons, notebooks, and backpack"
-                  className="w-full max-w-[420px] lg:max-w-lg aspect-[4/3] object-cover object-center rounded-xl shadow-2xl ring-1 ring-white/20"
+                  className="w-full max-w-[420px] lg:max-w-[500px] aspect-[4/3] object-cover object-center rounded-xl shadow-2xl ring-1 ring-white/20"
                 />
               </div>
             </ScrollReveal>
