@@ -47,13 +47,18 @@ export default function Partner() {
         <div className="container-tight mx-auto max-w-2xl">
           <ScrollReveal>
             <h2 className="text-3xl font-bold text-foreground text-center mb-8">Get In Touch</h2>
-            <form className="space-y-4 bg-card rounded-2xl p-8 shadow-soft border border-border/30">
+            <form
+              className="space-y-4 bg-card rounded-2xl p-8 shadow-soft border border-border/30"
+              action="mailto:hello@supplybox.org"
+              method="post"
+              encType="text/plain"
+            >
               <div className="grid sm:grid-cols-2 gap-4">
-                <input placeholder="Organization Name" className="h-12 px-4 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
-                <input placeholder="Contact Name" className="h-12 px-4 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
+                <input name="organization" required placeholder="Organization Name" className="h-12 px-4 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
+                <input name="contactName" required placeholder="Contact Name" className="h-12 px-4 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
               </div>
-              <input placeholder="Email" type="email" className="w-full h-12 px-4 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
-              <select className="w-full h-12 px-4 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring">
+              <input name="email" required placeholder="Email" type="email" className="w-full h-12 px-4 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
+              <select name="partnershipType" required className="w-full h-12 px-4 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring">
                 <option value="">Partnership Type</option>
                 <option>School Partnership</option>
                 <option>Corporate Sponsorship</option>
@@ -61,7 +66,10 @@ export default function Partner() {
                 <option>Community Organization</option>
                 <option>Other</option>
               </select>
-              <textarea placeholder="Tell us about your organization and how you'd like to partner" rows={4} className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none" />
+              <textarea name="message" required placeholder="Tell us about your organization and how you'd like to partner" rows={4} className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none" />
+              <p className="text-xs text-muted-foreground">
+                This opens your email app so you can review the inquiry before sending.
+              </p>
               <Button size="lg" className="w-full">Submit Partnership Inquiry <ArrowRight className="w-4 h-4" /></Button>
             </form>
           </ScrollReveal>
