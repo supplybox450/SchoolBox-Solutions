@@ -22,12 +22,17 @@ export default function Contact() {
             <div className="lg:col-span-3">
               <ScrollReveal>
                 <h2 className="text-2xl font-bold text-foreground mb-6">Send Us a Message</h2>
-                <form className="space-y-4">
+                <form
+                  className="space-y-4"
+                  action="mailto:hello@supplybox.org"
+                  method="post"
+                  encType="text/plain"
+                >
                   <div className="grid sm:grid-cols-2 gap-4">
-                    <input placeholder="Your Name" className="h-12 px-4 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
-                    <input placeholder="Email" type="email" className="h-12 px-4 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
+                    <input name="name" required placeholder="Your Name" className="h-12 px-4 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
+                    <input name="email" required placeholder="Email" type="email" className="h-12 px-4 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
                   </div>
-                  <select className="w-full h-12 px-4 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring">
+                  <select name="inquiryType" required className="w-full h-12 px-4 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring">
                     <option value="">I'm a...</option>
                     <option>Parent with a question</option>
                     <option>School interested in partnering</option>
@@ -35,7 +40,10 @@ export default function Contact() {
                     <option>Donor or sponsor</option>
                     <option>Other</option>
                   </select>
-                  <textarea placeholder="Your message" rows={5} className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none" />
+                  <textarea name="message" required placeholder="Your message" rows={5} className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none" />
+                  <p className="text-xs text-muted-foreground">
+                    This opens your email app so you can review the message before sending.
+                  </p>
                   <Button size="lg"><Send className="w-4 h-4" /> Send Message</Button>
                 </form>
               </ScrollReveal>
@@ -46,7 +54,7 @@ export default function Contact() {
                   <h2 className="text-2xl font-bold text-foreground mb-6">Get In Touch</h2>
                   {[
                     { icon: Mail, label: "Email", value: "hello@supplybox.org" },
-                    { icon: Phone, label: "Phone", value: "(780) 555-0123" },
+                    { icon: Phone, label: "Phone", value: "Phone support coming soon" },
                     { icon: MapPin, label: "Location", value: "Edmonton, AB, Canada" },
                   ].map((item, i) => (
                     <div key={i} className="flex items-start gap-4 p-4 rounded-xl bg-muted/50 border border-border/30">
