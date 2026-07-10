@@ -23,14 +23,14 @@ export default function HomePage() {
       {/* Hero */}
       <section className="bg-hero-gradient relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(255,255,255,0.08)_0%,_transparent_60%)]" />
-        <div className="container-wide mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-32 relative">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="container-wide mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-16 lg:py-28 relative">
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-16 items-center">
             <ScrollReveal>
-              <div className="space-y-6">
+              <div className="space-y-5 lg:space-y-6">
                 <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-foreground/10 text-primary-foreground/80 text-sm font-medium">
                   <Star className="w-3.5 h-3.5" /> Edmonton launch in progress
                 </span>
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primary-foreground leading-[1.08] tracking-tight">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-[1.08] tracking-tight">
                   School Supply Boxes Without the Store Run
                 </h1>
                 <p className="text-lg sm:text-xl text-primary-foreground/70 max-w-xl leading-relaxed">
@@ -47,11 +47,11 @@ export default function HomePage() {
               </div>
             </ScrollReveal>
             <ScrollReveal delay={0.15}>
-              <div className="flex justify-center lg:justify-end">
+              <div className="flex justify-center md:justify-end">
                 <img
                   src={heroImage}
                   alt="Colorful school supply box filled with pencils, crayons, notebooks, and backpack"
-                  className="w-full max-w-md lg:max-w-lg aspect-[4/3] object-cover object-center rounded-xl shadow-2xl ring-1 ring-white/20"
+                  className="w-full max-w-[420px] lg:max-w-lg aspect-[4/3] object-cover object-center rounded-xl shadow-2xl ring-1 ring-white/20"
                 />
               </div>
             </ScrollReveal>
