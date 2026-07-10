@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import { Package, Heart, Mail, Phone, MapPin } from "lucide-react";
 
+const contactEmail = "info@supplycollectivesbox.com";
+const contactPhone = "(587) 404-0118";
+
 export default function Footer() {
   return (
     <footer className="bg-foreground text-primary-foreground/80">
@@ -55,8 +58,8 @@ export default function Footer() {
           <div className="space-y-4">
             <h4 className="text-sm font-semibold text-primary-foreground uppercase tracking-wider">Contact</h4>
             <div className="flex flex-col gap-3 text-sm text-primary-foreground/60">
-              <span className="flex items-center gap-2"><Mail className="w-4 h-4" /> hello@supplybox.org</span>
-              <span className="flex items-center gap-2"><Phone className="w-4 h-4" /> Phone support coming soon</span>
+              <a href={`mailto:${contactEmail}`} className="flex items-center gap-2 hover:text-secondary transition-colors"><Mail className="w-4 h-4" /> {contactEmail}</a>
+              <a href="tel:+15874040118" className="flex items-center gap-2 hover:text-secondary transition-colors"><Phone className="w-4 h-4" /> {contactPhone}</a>
               <span className="flex items-center gap-2"><MapPin className="w-4 h-4" /> Edmonton, AB, Canada</span>
             </div>
           </div>
