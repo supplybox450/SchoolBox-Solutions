@@ -51,7 +51,7 @@ export default function HomePage() {
                 <img
                   src={heroImage}
                   alt="Colorful school supply box filled with pencils, crayons, notebooks, and backpack"
-                  className="w-full max-w-md lg:max-w-lg drop-shadow-2xl"
+                  className="w-full max-w-sm lg:max-w-md xl:max-w-lg max-h-[560px] object-contain rounded-lg bg-white shadow-2xl"
                 />
               </div>
             </ScrollReveal>
