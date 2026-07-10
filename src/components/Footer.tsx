@@ -56,7 +56,7 @@ export default function Footer() {
             <h4 className="text-sm font-semibold text-primary-foreground uppercase tracking-wider">Contact</h4>
             <div className="flex flex-col gap-3 text-sm text-primary-foreground/60">
               <span className="flex items-center gap-2"><Mail className="w-4 h-4" /> hello@supplybox.org</span>
-              <span className="flex items-center gap-2"><Phone className="w-4 h-4" /> (780) 555-0123</span>
+              <span className="flex items-center gap-2"><Phone className="w-4 h-4" /> Phone support coming soon</span>
               <span className="flex items-center gap-2"><MapPin className="w-4 h-4" /> Edmonton, AB, Canada</span>
             </div>
           </div>
