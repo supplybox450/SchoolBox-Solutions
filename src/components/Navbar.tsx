@@ -47,7 +47,7 @@ export default function Navbar() {
 
         <div className="hidden lg:flex items-center gap-3">
           <Button variant="ghost" size="sm" asChild>
-            <Link to="/dashboard">My Account</Link>
+            <Link to="/contact">Get Help</Link>
           </Button>
           <Button size="sm" asChild>
             <Link to="/order">
@@ -84,13 +84,6 @@ export default function Navbar() {
               </Link>
             ))}
             <hr className="my-2 border-border/50" />
-            <Link
-              to="/dashboard"
-              onClick={() => setOpen(false)}
-              className="px-4 py-3 rounded-lg text-sm font-medium text-muted-foreground hover:bg-muted/50"
-            >
-              My Account
-            </Link>
             <div className="flex gap-2 pt-2">
               <Button size="sm" className="flex-1" asChild>
                 <Link to="/order" onClick={() => setOpen(false)}>Order a Box</Link>
