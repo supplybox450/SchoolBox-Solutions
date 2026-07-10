@@ -48,23 +48,28 @@ export default function Sponsored() {
             <div className="bg-card rounded-2xl p-8 shadow-card border border-border/30">
               <h3 className="text-2xl font-bold text-foreground mb-2 text-center">Apply for a Sponsored Box</h3>
               <p className="text-muted-foreground text-center mb-8">Fill out this simple form and we'll connect you with available support.</p>
-              <form className="space-y-4">
+              <form
+                className="space-y-4"
+                action="mailto:hello@supplybox.org"
+                method="post"
+                encType="text/plain"
+              >
                 <div className="grid sm:grid-cols-2 gap-4">
-                  <input placeholder="Parent/Guardian Name" className="h-12 px-4 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
-                  <input placeholder="Email" type="email" className="h-12 px-4 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
+                  <input name="guardianName" required placeholder="Parent/Guardian Name" className="h-12 px-4 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
+                  <input name="email" required placeholder="Email" type="email" className="h-12 px-4 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
                 </div>
-                <input placeholder="Phone (optional)" className="w-full h-12 px-4 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
-                <input placeholder="Child's School" className="w-full h-12 px-4 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
+                <input name="phone" placeholder="Phone (optional)" className="w-full h-12 px-4 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
+                <input name="school" required placeholder="Child's School" className="w-full h-12 px-4 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
                 <div className="grid sm:grid-cols-2 gap-4">
-                  <select className="h-12 px-4 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring">
+                  <select name="grade" required className="h-12 px-4 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring">
                     <option value="">Grade</option>
                     {["Kindergarten", ...Array.from({ length: 12 }, (_, i) => `Grade ${i + 1}`)].map((g) => (
                       <option key={g}>{g}</option>
                     ))}
                   </select>
-                  <input placeholder="Number of Children" type="number" min="1" className="h-12 px-4 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
+                  <input name="childrenCount" required placeholder="Number of Children" type="number" min="1" className="h-12 px-4 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
                 </div>
-                <textarea placeholder="Tell us a bit about your situation (optional)" rows={3} className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none" />
+                <textarea name="message" placeholder="Tell us a bit about your situation (optional)" rows={3} className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none" />
                 <p className="text-xs text-muted-foreground">Eligibility is based on availability and community partner guidelines. All applications are confidential.</p>
                 <Button size="lg" className="w-full">Apply for a Sponsored Box <ArrowRight className="w-4 h-4" /></Button>
               </form>
